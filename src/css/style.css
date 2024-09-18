@@ -31,7 +31,7 @@ h2 {
 .main-container {
   max-width: 960px;
   margin: auto;
-  padding: 0px 16px;
+  padding: 16px 16px;
 }
 
 h1 {
@@ -48,6 +48,8 @@ h1 {
 
 .card {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   min-width: 280px;
   border: 1px solid var(--soft-gray);
   border-radius: 8px;
@@ -55,16 +57,15 @@ h1 {
 }
 
 .card__image {
-  display: grid;
-  place-items: center;
-  padding: 16px;
+  display: flex;
+  justify-content: center;
+  height: 380px;
   overflow: hidden;
-  /* height: 460px; */
 }
 
 .card__image-photo {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.6s;
 }
 
@@ -75,17 +76,19 @@ h1 {
 .card__details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  height: 240px;
   padding: 16px;
 }
 
 .card__title {
   font-weight: 500;
+  padding-bottom: 14px;
   color: var(--dark-blue);
 }
 
 .card__description {
   font-weight: 300;
+  padding-bottom: 14px;
   color: var(--gray);
 }
 
@@ -109,7 +112,12 @@ h1 {
   background-color: var(--light-blue);
 }
 
+.card__control {
+  margin-top: auto;
+}
+
 .card__button {
+  width: 100%;
   padding: 8px 32px;
   border: none;
   border-radius: 4px;
@@ -117,6 +125,12 @@ h1 {
   font-weight: 500;
   color: var(--white);
   cursor: pointer;
+}
+
+.card__timer {
+  padding-top: 8px;
+  text-align: center;
+  color: var(--gray);
 }
 
 .card__button:hover {

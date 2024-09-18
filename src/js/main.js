@@ -73,6 +73,9 @@ function renderProducts() {
     cardInfoDiv.appendChild(price);
     cardInfoDiv.appendChild(category);
 
+    const cardControlDiv = document.createElement("div");
+    cardControlDiv.classList.add("card__control");
+
     const timer = document.createElement("p");
     timer.classList.add("card__timer");
     timer.textContent = "Temporizador";
@@ -81,11 +84,14 @@ function renderProducts() {
     button.classList.add("card__button");
     button.textContent = "Add to bag";
 
+    cardControlDiv.appendChild(button);
+    cardControlDiv.appendChild(timer);
+
     cardDetailsDiv.appendChild(title);
     cardDetailsDiv.appendChild(description);
     cardDetailsDiv.appendChild(cardInfoDiv);
-    cardDetailsDiv.appendChild(timer);
-    cardDetailsDiv.appendChild(button);
+    cardDetailsDiv.appendChild(cardControlDiv);
+    /* cardDetailsDiv.appendChild(timer); */
 
     productCard.appendChild(cardImageDiv);
     productCard.appendChild(cardDetailsDiv);
