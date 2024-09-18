@@ -1,4 +1,4 @@
-# Make It Real - Gestión de Contactos usando JavaScript y DOM
+# Make It Real - Aplicación Web con JavaScript Vanilla
 
 This is a solution to the Web Aplication with JavaScript Vanilla project of the Make It Real course.
 
