@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* General */
+:root {
+  --soft-gray: hsl(220, 13%, 91%);
+  --soft-gray-2: hsl(220, 14%, 96%);
+  --soft-gray-3: hsl(210, 40%, 96%);
+  --gray: hsl(220, 9%, 46%);
+  --dark-blue: hsl(221, 39%, 11%);
+  --blue: #4f46e5;
+  --soft-blue: #6366f1;
+  --light-blue: #eff6ff;
+  --white: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +21,116 @@
 }
 
 body,
-button {
-  font-family: "Montserrat", sans-serif;
+button,
+h1,
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.main-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 0px 16px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  padding: 48px 0px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  border: 1px solid var(--soft-gray);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card__image {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  overflow: hidden;
+  /* height: 460px; */
+}
+
+.card__image-photo {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s;
+}
+
+.card__image-photo:hover {
+  transform: scale(1.05);
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.card__title {
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+
+.card__description {
+  font-weight: 300;
+  color: var(--gray);
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__price {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+
+.card__category {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--blue);
+  background-color: var(--light-blue);
+}
+
+.card__button {
+  padding: 8px 32px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--blue);
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: var(--soft-blue);
+}
+
+/* Media queries */
+@media (max-width: 1000px) {
+  .list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 280px;
+  }
 }
