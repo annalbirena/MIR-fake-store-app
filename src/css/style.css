@@ -137,6 +137,11 @@ h1 {
   background-color: var(--soft-blue);
 }
 
+.card__button:disabled {
+  background-color: var(--soft-gray);
+  cursor: not-allowed;
+}
+
 /* Media queries */
 @media (max-width: 1000px) {
   .list {
